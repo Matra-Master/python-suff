@@ -2,12 +2,15 @@
 # Tutorial from Freecodecamp.org
 #
 # By Fran
-# Acordate que es tu primer tutorial Fran, no tenés que entender aún todo lo que hacés
-# solo tenés que emocionarte con el resultado para que tu monkey mind agarre impulso :)
+# Acordate que es tu primer tutorial Fran,
+# no tenés que entender aún todo lo que hacés
+# solo tenés que emocionarte con el resultado
+# para que tu monkey mind agarre impulso :)
 #
 # Part 7: Sound
 
 import turtle
+import os
 
 wn = turtle.Screen()
 wn.title("Pong pong pong")
@@ -99,9 +102,12 @@ while True:
     if ball.ycor() > 290:       # Top Border
         ball.sety(290)
         ball.dy *= -1
+        os.system("aplay paddle.wav &")             # sound
+
     if ball.ycor() < -290:      # Bottom Border
         ball.sety(-290)
         ball.dy *= -1
+        os.system("aplay paddle.wav &")             # sound
 
     if ball.xcor() > 390:       # Right Border
         ball.goto(0, 0)
@@ -121,7 +127,9 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
         ball.dx *= -1
+        os.system("aplay paddle.wav &")             # sound
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
         ball.dx *= -1
+        os.system("aplay paddle.wav &")             # sound
