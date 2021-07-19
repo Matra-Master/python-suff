@@ -7,10 +7,12 @@
 # @todo check if a number is valid in a certain position        *
 # @todo the solving backtracking mad procedure                  *
 
-def solve(bo):
+def solve(bo: list) -> bool:
     """
     Tries to solve the sudoku board
+
     """
+
     # pos is a pair of coordinates for a place in the board
     # where no number has been placed yet.
 
@@ -48,11 +50,10 @@ def solve(bo):
     return False
 
 
-def find_empty(bo):
+def find_empty(bo: list) -> (int, int):
     """
     Finds an empty space in the board
     bo is a 2d list of ints
-    returns (row, col)
     """
     for i in range(len(bo)):
         for j in range(len(bo[0])):
@@ -61,7 +62,7 @@ def find_empty(bo):
     return None
 
 
-def safe_write(bo, pos, num):
+def safe_write(bo: list, pos: int, num: int) -> bool:
     """
     Checks if it's safe to write num in pos
     returns bool
@@ -86,7 +87,7 @@ def safe_write(bo, pos, num):
     return True
 
 
-def print_board(bo):
+def print_board(bo: list) -> None:
     """
         #Prints the board so i can debug and show onscreen
         #bo is a 2d list of ints
