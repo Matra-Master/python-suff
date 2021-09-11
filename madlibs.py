@@ -14,7 +14,7 @@ adj = input("Adjectibe: ")
 verb1 = input("Verb: ")
 obj1 = input("Object: ")
 aname = input("Some Awesome name: ")
-madlib = f"In norse mithology, {subj} created the universe and it was {adj}! Then they \
+madlib = f"In medieval mithology, {subj} created the universe and it was {adj}! Then they \
 {verb1} a {obj1} and called it {aname}"
 
 print(madlib)
